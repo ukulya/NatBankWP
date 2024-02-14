@@ -7,15 +7,14 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 
 header('Access-Control-Allow-Credentials: true');
 
-$distance_data = file_get_contents("https://www.nbkr.kg/XML/daily.xml");
-// echo $distance_data;
-$xml = simplexml_load_string($distance_data);
+$data = file_get_contents("https://www.nbkr.kg/XML/daily.xml");
+
+$xml = simplexml_load_string($data);
 
 $client = [];
 foreach ($xml as $val) {
     $client[] = (string) $val->Value;
 }
 
-// print_r($client) ; // produces 17992 in this case
 echo json_encode($client);
 
