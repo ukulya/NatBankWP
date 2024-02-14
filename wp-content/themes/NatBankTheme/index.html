@@ -1,0 +1,78 @@
+<code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+    <span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Database</span>;
+    
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Database</span>
+    </span>{
+        <span class="hljs-keyword">protected</span> <span class="hljs-variable">$adapter</span>;
+    
+        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span>(<span class="hljs-params"></span>)
+        </span>{
+            <span class="hljs-variable language_">$this</span>-&gt;adapter = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MySqlAdapter</span>;
+        }
+    }
+    
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MysqlAdapter</span> </span>{}</code>
+
+    <code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+        <span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Database</span>;
+        
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Database</span>
+        </span>{
+            <span class="hljs-keyword">protected</span> <span class="hljs-variable">$adapter</span>;
+        
+            <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span>(<span class="hljs-params">MySqlAdapter <span class="hljs-variable">$adapter</span></span>)
+            </span>{
+                <span class="hljs-variable language_">$this</span>-&gt;adapter = <span class="hljs-variable">$adapter</span>;
+            }
+        }
+        
+        <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MysqlAdapter</span> </span>{}</code>
+
+        <code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+            <span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Database</span>;
+            
+            <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Database</span>
+            </span>{
+                <span class="hljs-keyword">protected</span> <span class="hljs-variable">$adapter</span>;
+            
+                <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span>(<span class="hljs-params">AdapterInterface <span class="hljs-variable">$adapter</span></span>)
+                </span>{
+                    <span class="hljs-variable language_">$this</span>-&gt;adapter = <span class="hljs-variable">$adapter</span>;
+                }
+            }
+            
+            <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AdapterInterface</span> </span>{}
+            
+            <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MysqlAdapter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">AdapterInterface</span> </span>{}</code>
+
+            <code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+                <span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Database</span>;
+                
+                <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Database</span>
+                </span>{
+                    <span class="hljs-keyword">protected</span> <span class="hljs-variable">$adapter</span>;
+                
+                    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span> (<span class="hljs-params">MysqlAdapter <span class="hljs-variable">$adapter</span></span>)    </span>{
+                        <span class="hljs-variable language_">$this</span>-&gt;adapter = <span class="hljs-variable">$adapter</span>;
+                    }
+                }
+                
+                <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AdapterInterface</span> </span>{}
+                
+                <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MysqlAdapter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">AdapterInterface</span> </span>{}</code>
+
+                <code class="hljs language-php"><span class="hljs-meta">&lt;?php</span>
+                    <span class="hljs-keyword">namespace</span> <span class="hljs-title class_">Database</span>;
+                    
+                    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Database</span>
+                    </span>{
+                        <span class="hljs-keyword">protected</span> <span class="hljs-variable">$adapter</span>;
+                    
+                        <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__construct</span> (<span class="hljs-params">AdapterInterface <span class="hljs-variable">$adapter</span></span>)    </span>{
+                            <span class="hljs-variable language_">$this</span>-&gt;adapter = <span class="hljs-variable">$adapter</span>;
+                        }
+                    }
+                    
+                    <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AdapterInterface</span> </span>{}
+                    
+                    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MysqlAdapter</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AdapterInterface</span> </span>{}</code>
