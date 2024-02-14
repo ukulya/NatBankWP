@@ -63,9 +63,7 @@ header .current-menu-item a {
   color: #fff;
 }
 
-.navbar:not(.scrolled) {
-  padding: 45px 0;
-}
+
 
 
 .custom-btn {
@@ -246,6 +244,8 @@ form .custom-btn {
 }
 .rates-text{
   display: none;
+  position: absolute;
+  bottom: -5px;
 }
 .list-group-item.active{
   background-color: #e08c1c;
@@ -715,9 +715,7 @@ textarea {
 }
 
 @media (max-width: 1399px) {
-  .section-hero {
-    padding: 215px 0;
-  }
+
   
   .owl-next {
     right: -50px;
@@ -740,7 +738,17 @@ textarea {
   
 }
 
+@media (max-width: 991px) and (min-width: 768px) {
+  .card-body img {
+    height: 50px;
+    width: 50px;
+  }
+}
 @media (max-width: 991px) {
+  .navbar-nav li{
+    width: 100%;
+    text-align: center;
+  }
   .navbar.active {
     background-image: linear-gradient(to bottom, #3e5e7d, #1d3047);
   }
@@ -806,16 +814,16 @@ textarea {
   .owl-nav {
     display: none;
   }
- 
+  .section-hero .col-12{
+margin-bottom: 20px;
+  }
 }
 @media (max-width: 575px) {
   
   .custom-logo {
     max-width: 129px;
   }
-  .navbar:not(.scrolled) {
-    padding: 24px 0;
-  }
+
 
   .navbar-toggler {
     padding: 5px;

@@ -20,18 +20,18 @@ get_header(); ?>
                 <h1>Exchange rates and foreign currencies</h1>
                 <hr>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-12 position-relative">
                     <p class=""><?php echo date("F j, Y, g:i a"); ?></p>
                     <span class="rates-text text-success">Rates Have Been Updated!</span>
                     </div>
-                    <div class="col-6 text-center">
+                    <div class="col-md-6 col-12 text-center">
                     <a role="button" class=" custom-btn currency-btn ms-auto">Click to update the rates</a>
                     </div>
                    
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-sm-3 col-12">
+                    <div class="col-md-3 col-sm-6 col-12">
                         <div class="card">
                             <div class="card-body">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/us.png" class="card-img-top" alt="USD">
@@ -39,7 +39,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-12">
+                    <div class="col-md-3 col-sm-6 col-12">
                         <div class="card">
                             <div class="card-body">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/eu.png" class="card-img-top" alt="EUR">
@@ -47,7 +47,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-12">
+                    <div class="col-md-3 col-sm-6 col-12">
                         <div class="card">
                             <div class="card-body">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kz.png" class="card-img-top" alt="KZT">
@@ -55,7 +55,7 @@ get_header(); ?>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3 col-12">
+                    <div class="col-md-3 col-sm-6 col-12">
                         <div class="card">
                             <div class="card-body">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/ru.png" class="card-img-top" alt="RUB">
